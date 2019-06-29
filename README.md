@@ -15,7 +15,7 @@
 `docker run -tid --name baota --net=host --privileged=true --restart always -v baota_www:/www -v ~/wwwroot:/www/wwwroot pch18/baota`
 
 ### 如果特殊情况不能使用host网络模式(macos和windows不支持host), 或者容器运行后不能打开面板页面请删除容器后,使用如下命令以bridge网络模式运行  
-`docker run -tid --name baota -p 80:80 -p 443:443 -p 8888:8888 -p 888:888 -p 20:20 -p 21:21 --privileged=true --restart always -v baota_www:/www -v ~/wwwroot:/www/wwwroot pch18/baota`
+`docker run -tid --name baota -p 80:80 -p 443:443 -p 8888:8888 -p 888:888 -p 20:20 -p 21:21 --privileged=true --restart=always -v baota_www:/www -v ~/wwwroot:/www/wwwroot pch18/baota`
 
 ### 删除容器命令如下  
 `docker rm -fv baota && docker volumn rm baota_www`
